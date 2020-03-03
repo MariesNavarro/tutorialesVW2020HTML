@@ -1,3 +1,17 @@
+<?php
+	require_once('backend/lib/db.php');
+  require_once('respuesta.php');
+
+  if(isset($_GET["id"])) {
+      $username     = $_GET["id"];
+      $lstsecciones = get_secciones($username);
+  } else  {
+    $username = "";
+    $lstsecciones = "";
+  }
+
+//  echo 'user: '.$username .'sec: '.$lstsecciones;
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,16 +19,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0000, minimum-scale=1.0000, maximum-scale=1.0000, user-scalable=yes">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
-    <title>Volkswagen</title>
   </head>
+    <title>Volkswagen</title>
   <body>
   <div class="mainContainer">
     <header> <img src="img/ic.svg" height="10"> </header>
     <!-- LISTA DE BOTONES TUTORIALES -->
     <ul id="tutorialIndex">
       <!-- BTN TUTORIAL 1: DASHBOARD -->
-      <li class="seenTut">
-        <a role="button" onclick="popPreview('open', 8, this, 'Dashboard', 'dashIc')" class="displayFlex">
+      <li class="seenTut" id="dashIc">
+        <a role="button" onclick="popPreview('open', 8, this, 'Dashboard', 'dashIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">1</div>
           <div class="infoTut displayFlex">
             <h2>DASHBOARD</h2>
@@ -22,12 +36,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 8, this, 'Dashboard', 'dashIc')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 8, this, 'Dashboard', 'dashIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 2: PARRILA DE CONTENIDO -->
-      <li class="noseenTut">
-        <a role="button" onclick="popPreview('open', 5, this, 'Parrilla De Contenido', 'parrilaIc')" class="displayFlex">
+      <li class="seenTut" id="parrilaIc">
+        <a role="button" onclick="popPreview('open', 5, this, 'Parrilla De Contenido', 'parrilaIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">2</div>
           <div class="infoTut displayFlex">
             <h2>PARRILLA DE CONTENIDO</h2>
@@ -35,12 +49,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 5, this, 'Parrilla De Contenido', 'parrilaIc')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 5, this, 'Parrilla De Contenido', 'parrilaIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 3: BIBLIOTECA DE CONTENIDO -->
-      <li class="noseenTut">
-        <a role="button" onclick="popPreview('open', 3, this, 'Biblioteca de Contenido', 'bibliotecaIc')" class="displayFlex">
+      <li class="seenTut" id="bibliotecaIc">
+        <a role="button" onclick="popPreview('open', 3, this, 'Biblioteca de Contenido', 'bibliotecaIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">3</div>
           <div class="infoTut displayFlex">
             <h2>BIBLIOTECA DE CONTENIDO</h2>
@@ -48,12 +62,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 3, this, 'Biblioteca de Contenido', 'bibliotecaIc')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 3, this, 'Biblioteca de Contenido', 'bibliotecaIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 4: MIS MATERIALES -->
-      <li class="noseenTut">
-        <a role="button" onclick="popPreview('open', 4, this, 'Mis Materiales', 'materialesIc')" class="displayFlex">
+      <li class="seenTut" id="materialesIc">
+        <a role="button" onclick="popPreview('open', 4, this, 'Mis Materiales', 'materialesIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">4</div>
           <div class="infoTut displayFlex">
             <h2>MIS MATERIALES</h2>
@@ -61,12 +75,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 4, this, 'Mis Materiales', 'materialesIc')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 4, this, 'Mis Materiales', 'materialesIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 5: HISTORIAL DE PUBLICACIONES -->
-      <li class="noseenTut">
-        <a role="button" onclick="popPreview('open', 4, this, 'Historial de Publicaciones', 'historialIc')" class="displayFlex">
+      <li class="seenTut" id="historialIc">
+        <a role="button" onclick="popPreview('open', 4, this, 'Historial de Publicaciones', 'historialIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">5</div>
           <div class="infoTut displayFlex">
             <h2>HISTORIAL DE PUBLICACIONES</h2>
@@ -74,12 +88,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 4, this, 'Historial de Publicaciones', 'historialIc')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 4, this, 'Historial de Publicaciones', 'historialIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 6: MÉTRICAS -->
-      <li class="noseenTut">
-        <a role="button" onclick="popPreview('open', 4, this, 'Métricas', 'metricasIc')" class="displayFlex">
+      <li class="seenTut" id="metricasIc">
+        <a role="button" onclick="popPreview('open', 4, this, 'Métricas', 'metricasIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">6</div>
           <div class="infoTut displayFlex">
             <h2>MÉTRICAS</h2>
@@ -87,7 +101,7 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 4, this, 'Métricas', 'metricasIc')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 4, this, 'Métricas', 'metricasIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
     </ul>
@@ -127,7 +141,7 @@
       </div>
     </div>
     <div id="footTut" class="displayFlex">
-      <a role="button" class="trans5" onclick="popPreview('close', 0, this, 'Titulo', 'file')">
+      <a role="button" class="trans5" onclick="popPreview('close', 0, this, 'Titulo', 'file','user')" id="btnTerminar">
         <span class="trans5"></span>
         <p class="trans5">Terminar Tutorial</p>
       </a>
@@ -142,17 +156,31 @@
 
       $(document).ready(function(){
         console.log('ready');
+        var secciones = "<?php echo $lstsecciones; ?>";
+        var list = secciones.split(',');
+
+        console.log(secciones);
+
+        for (var i = 0; i < list.length; i++) {
+          $("#"+list[i]).removeClass("seenTut");
+          $("#"+list[i]).addClass("noseenTut");
+        }
+
       });
 
       $(document).keydown(function (e){
-        if(e.keyCode == 37) // left arrow
-        {
-            arrowsSlider('prev');
-        }
-        else if(e.keyCode == 39)    // right arrow
-        {
-            arrowsSlider('next')
-        }
+          if(e.keyCode == 37) // left arrow
+          {
+              arrowsSlider('prev');
+          }
+          else if(e.keyCode == 39)    // right arrow
+          {
+              arrowsSlider('next')
+          }
+					else if(e.keyCode == 13)    // enter
+					{
+						 $("#btnTerminar").click();
+					}
     });
 
   </script>
