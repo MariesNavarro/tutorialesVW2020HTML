@@ -41,7 +41,7 @@
       </li>
       <!-- BTN TUTORIAL 2: PARRILA DE CONTENIDO -->
       <li class="seenTut" id="parrilaIc">
-        <a role="button" onclick="popPreview('open', 5, this, 'Parrilla De Contenido', 'parrilaIc','<?php echo $username; ?>')" class="displayFlex">
+        <a role="button" onclick="popPreview('open', 4, this, 'Parrilla De Contenido', 'parrilaIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">2</div>
           <div class="infoTut displayFlex">
             <h2>PARRILLA DE CONTENIDO</h2>
@@ -49,12 +49,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 5, this, 'Parrilla De Contenido', 'parrilaIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 4, this, 'Parrilla De Contenido', 'parrilaIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 3: BIBLIOTECA DE CONTENIDO -->
       <li class="seenTut" id="bibliotecaIc">
-        <a role="button" onclick="popPreview('open', 3, this, 'Biblioteca de Contenido', 'bibliotecaIc','<?php echo $username; ?>')" class="displayFlex">
+        <a role="button" onclick="popPreview('open', 2, this, 'Biblioteca de Contenido', 'bibliotecaIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">3</div>
           <div class="infoTut displayFlex">
             <h2>BIBLIOTECA DE CONTENIDO</h2>
@@ -62,12 +62,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 3, this, 'Biblioteca de Contenido', 'bibliotecaIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 2, this, 'Biblioteca de Contenido', 'bibliotecaIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 4: MIS MATERIALES -->
       <li class="seenTut" id="materialesIc">
-        <a role="button" onclick="popPreview('open', 4, this, 'Mis Materiales', 'materialesIc','<?php echo $username; ?>')" class="displayFlex">
+        <a role="button" onclick="popPreview('open', 3, this, 'Mis Materiales', 'materialesIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">4</div>
           <div class="infoTut displayFlex">
             <h2>MIS MATERIALES</h2>
@@ -75,12 +75,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 4, this, 'Mis Materiales', 'materialesIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 3, this, 'Mis Materiales', 'materialesIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 5: HISTORIAL DE PUBLICACIONES -->
       <li class="seenTut" id="historialIc">
-        <a role="button" onclick="popPreview('open', 4, this, 'Historial de Publicaciones', 'historialIc','<?php echo $username; ?>')" class="displayFlex">
+        <a role="button" onclick="popPreview('open', 3, this, 'Historial de Publicaciones', 'historialIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">5</div>
           <div class="infoTut displayFlex">
             <h2>HISTORIAL DE PUBLICACIONES</h2>
@@ -88,12 +88,12 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 4, this, 'Historial de Publicaciones', 'historialIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 3, this, 'Historial de Publicaciones', 'historialIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
       <!-- BTN TUTORIAL 6: MÉTRICAS -->
       <li class="seenTut" id="metricasIc">
-        <a role="button" onclick="popPreview('open', 4, this, 'Métricas', 'metricasIc','<?php echo $username; ?>')" class="displayFlex">
+        <a role="button" onclick="popPreview('open', 5, this, 'Métricas', 'metricasIc','<?php echo $username; ?>')" class="displayFlex">
           <div class="indexTut displayFlex">6</div>
           <div class="infoTut displayFlex">
             <h2>MÉTRICAS</h2>
@@ -101,7 +101,7 @@
           </div>
         </a>
         <div class="hoverTut trans5">
-          <p onclick="popPreview('open', 4, this, 'Métricas', 'metricasIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
+          <p onclick="popPreview('open', 5, this, 'Métricas', 'metricasIc','<?php echo $username; ?>')">COMENZAR TUTORIAL →</p>
         </div>
       </li>
     </ul>
